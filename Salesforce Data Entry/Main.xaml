@@ -1,0 +1,815 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Exceptions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C0A94094A4C_curated_.FKL2c4jIj5O1uMaDDtdOHt1</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>C0A94094A4C_curated_.XQ0V52DgKHE12FZXE3zdsj81</AssemblyReference>
+      <AssemblyReference>C0A94094A4C_Lead_Cre.Ir3zr21SjwD1bCow04ebrHf</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1530,3260" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_Excel" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="520,3237" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="Mehedi" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="486,57" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,604" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="512,544" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="Data.xlsx">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,252" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,192" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveTo="[DT_Excel]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelProcessScopeX>
+      <uix:NApplicationCard CloseMode="Never" DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486,3097" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="faf7000c-1391-4e69-adae-2b174b9a1567">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,2857" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Excel]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="418,2795" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,2624" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Home'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/pipelineInspection" CVScreenId="29b6c978-701f-476e-99d6-b1f1fac9730c" ContentHash="L8Pj5kTbE0inUAQRIV2eAA" DesignTimeRectangle="153, 192, 35, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl aaname='Home' class='slds-truncate' tag='SPAN' /&gt;" Guid="07368c50-1751-442d-8e07-1fc2b899d4c1" InformativeScreenshot="9a078ebe41b9cf3f8819180dfb138bbc.png" Reference="lx6ywIDJqEa-703Y1lPkZQ/POGtMPJCKEmBmDeW_V15Cw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Lead Intelligence View | Leads | Salesforce' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.PointOffset>
+                              <uix:PointOffset X="2" Y="-2" />
+                            </uix:TargetAnchorable.PointOffset>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Leads'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/pipelineInspection" CVScreenId="f33869c8-31a6-4c52-9d5d-59e75a945f5a" ContentHash="oHGDPovsmEewZA2nuvnTNQ" CvTextArea="216, 195, 35, 13" CvTextArgument="Leads" CvType="Text" DesignTimeRectangle="216, 192, 34, 20" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl aaname='Leads' class='slds-truncate' tag='SPAN' type='' check:innerText='Leads' /&gt;" Guid="143acc64-110a-41b4-b446-bab1c6e52e8a" InformativeScreenshot="50045576bbbe940d8d00b76d9c44f84e.png" Reference="lx6ywIDJqEa-703Y1lPkZQ/LnQtibMsvUWPtFUJCjCYqA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Lead Intelligence View | Leads | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="f33869c8-31a6-4c52-9d5d-59e75a945f5a" CvElementArea="28, 186, 33, 31" CvType="Icon" DesignTimeRectangle="50, 200, 5, 5" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl class='slds-icon-waffle' tag='DIV' type='' aaname='' /&gt;" Guid="7324cef8-410c-45ab-8a64-328b8f09a9bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVEhL7ZMxCsUgEET/oRPwBDmCEe+WIpAmdazdz/yvQ6pthlhlwOotvFWZjw3IWMlxHBZjtBCC5Zxt33ertTaqcUowMM+zTdP0Oyklu66rUY1Tgg36AM6yLHaeZ6MapwRXvA9hs1JKoxqnBG+IK2KDdV1t27ZG/lE4JfgkvCGueN+wR+GUPJmxkrcnPR6nROkB4nFKlB4gHqdE6QHicUqezFjJ25Mej1Oi9ADxOCVKDxCPU6L0APE4Jc/F7Au+tZMvFT3PHAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'New'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/pipelineInspection" CVScreenId="6c3c9d35-adf6-48d8-a03c-1501b485b1cb" ContentHash="9Z7c6RDElEi5NZF9xqVMOQ" DesignTimeRectangle="1745, 256, 61, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/lafSinglePaneWindowManager:contentManager/lafPageHost/runtime_pipeline_inspectorPipelineInspectorHome/runtime_pipeline_inspectorActionsBar:actionsBar/auraIf/runtime_pipeline_inspectorActionsButtonGroup' tag='RUNTIME_PIPELINE_INSPECTOR-ACTIONS-BUTTON-GROUP' /&gt;&lt;webctrl tag='BUTTON' /&gt;" Guid="b87a4319-df7e-4d17-8744-46785011d6dc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAkCAYAAADWzlesAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVGhD7ZrBccIwEEV9ohwq8lAAJ3eQEjimDk4ugiI40YG5Wvm7WsmS5ckESMRk9N/MDrIsC/ZpJQ7QTdPdtR6UgOj6vnetxTAM2XXnDLlohXWulAAoAVACoARACYASACUASgCUAH5dwvg5u91xdqebdURmd9jsr08VCfsPiMBrTmsSzj7hw8U6leYkoHHx22L03WBDgo0JEe6dUEmpQN1iSWVdIbmstJ9TT4K1lw+7krCWJNdI/opmnqR/Lh0r8+ZV9hhVJeSJ5xLycR6pAL1/wz0Tom2MjfdsnqXCHqeyBFtVTSiXIEmlWyGEX+FlrDwvffIatxne4xWqSxAk4XBYppXwXUn7eXwF6KpbdYxBxgu8RYImYCsdJJQH5wo7I2QrBFQmIs7xJO+RAHRbpBJA6IuBBPUcUHzlFN8S2Zjn+HMJ/wFKAJQAKAFQAqAEQAmAEgAlAEoAhQTpaC2Kn+a3/rTQWlDCdHdfh2hk0p2WdRcAAAAASUVORK5CYII=" InformativeScreenshot="e23325cc2cd89929270c40ae73795edd.png" Reference="lx6ywIDJqEa-703Y1lPkZQ/4ZOkjUrmWEy_xtmH7yp7aw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Lead Intelligence View | Leads | Salesforce' /&gt;" SearchSteps="Selector, Image" Version="V5" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NSelectItem ContinueOnError="True" DisplayName="Select Item '--None--'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,189" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[CurrentRow(2).ToString]" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Version="V4">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="7">
+                            <x:String>--None--</x:String>
+                            <x:String>Mr.</x:String>
+                            <x:String>Ms.</x:String>
+                            <x:String>Mrs.</x:String>
+                            <x:String>Dr.</x:String>
+                            <x:String>Prof.</x:String>
+                            <x:String>Mx.</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="943428b1-2576-4cb0-9a73-c58846757293" ContentHash="aBPo_fZqKUan6UbZauc9yw" CvElementArea="587, 389, 359, 35" CvType="InputBox" DesignTimeRectangle="590, 391, 355, 32" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aria-label='Salutation' tag='BUTTON' type='button' class='slds-combobox__input slds-input_faux fix-slds-input_faux slds-combobox__input-value' aaname='--None--' check:innerText='--None--' /&gt;" Guid="e79ce938-1e47-4439-888e-acfecca141c0" InformativeScreenshot="f51abbb1f90d6ee7069941363f137c18.png" Reference="lx6ywIDJqEa-703Y1lPkZQ/qybXur5Gl0y25YGzVYCFVQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="943428b1-2576-4cb0-9a73-c58846757293" CvTextArea="589, 371, 59, 13" CvTextArgument="Salutation" CvType="Text" DesignTimeRectangle="590, 368, 66, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Salutation' tag='LABEL' type='' class='slds-form-element__label' check:innerText='Salutation' /&gt;" Guid="b1a9473c-1d51-498e-ae11-439cacce00e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAXCAYAAAC2/DnWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGrSURBVFhH7ZU9koJAEIX3oMammJqSGnMGU1PPYEzmGUwNZ+ujfFTb0jLKEm1/VZQM8/pn3gz4U5JJ0piANCYgjQlIYwLSmIA0JmCxMafTqXRd9xitB3Xati33+/3xZF2ejLler2W73ZbNZjNcNQv+xBh06Gv4RLsGozGY0jTN8CvO5/PsDv0LYw6HQ2gETeok7Xa7crvdxucyxufgl3Hf98Nr4OO5uNdzchEzpbV1wPbDKbcbiu54PI55bL+1jMaoIVtcMEchLRiNdDXGqGl06MXlchkuQGNPrNfaOsTYxRKz3+/HMTprFmPF1vLy8SUBLr9LRGOaX2KMZU6rOujYQBkqmNMzH8tzYtRXDS/GCJLbZCTX0bXGLTFGi1ROv8uRMTanYF56H+v7qiE0xjbgHWcsM9Qw+Ab8ImzDzNmdf6cF1fFxgjk987GLjCGpLUYyvfN28cC9xnaOd5x3XYtjLjoFXmvrgdWCrcP93DfGxjL/tTHaialj7ecobJvUPTCWjg+2PQX8kleLYiOkZWHUiLTv6vh/nT81JnkmjQlIYwLSmIA0JiCNmaSUX92f4xVMOgSNAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NSelectItem.Target>
+                      </uix:NSelectItem>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'First Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(3).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="a5eea30a-0eec-469b-b1fc-370414871dd8" ContentHash="KIJWnjdskUuHHd-voi-zNw" CvElementArea="588, 451, 359, 36" CvType="InputBox" DesignTimeRectangle="590, 453, 355, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl tag='INPUT' type='text' class='slds-input' placeholder='First Name' aaname='First Name' /&gt;" Guid="1a9bce07-1daa-48d2-a3ca-0f1348a96092" InformativeScreenshot="dd5ae2735b4c79d52a0ca867999f66e3.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/t5-04VaFGk2-MuX95Ah6cA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="a5eea30a-0eec-469b-b1fc-370414871dd8" DesignTimeRectangle="590, 429, 70, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='First Name' tag='LABEL' /&gt;" Guid="e23c3f87-e816-47e0-ab2d-cade90c5a083" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAYCAYAAABdlmuNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGdSURBVFhH7ZUxjoMwEEX3oKnTkjYtLTUtZ0ibM+QKOUNaSq8e2o8ms0AmXqTVaudJFrHx2MPzQD5KEiJFBUlRQVJUkBQVJEUFSVFBQqL6vp/af2YWNY5jadu2HA6HudFnvIb7/V7O53N5PB5fI8/cbrdpD64W5rPvWtxv8SSq67rpAfcgIqppmm9z/rQoXrvL5TL95so8HuZ0Ok0PxJiqkLmqFjXFWpijde1r7UWRz/F4nNdSBeoghmGYxpnDmHJRX7Ae+S7di1Alym5E4kuvKPdfVRTrEke8BHhR1+v1aS8dDmPkYfNCgu0rL7/Hq9yW2PxG6aS9KFsBa5tGRYGdS7OiLPaeX3+rz16SBlzf/cxUVZQVBSSCWJ02+MQ9VhRoXeZbUVz1ytg9tsT4vvLzjfEou4gS9uTeFUUMsbxqEkVjDeVEX/e2xPi+36uGXUXZ5HzinqXkieG7s1Y1xNRUFI044mv5sSg2Vyn7fxPmMa5Yy9opM1cy1Nf6VFNNRalPfnYtnjnKLCrZJkUFSVFBUlSQFBUkRQVJUSFK+QT9OXsXsH41QAAAAABJRU5ErkJggg==" SearchSteps="Selector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'Middle Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(4).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="bdfbc7b3-2245-4ed7-88ef-27b2ca0af913" ContentHash="25sNPOJqJUGJiFYkl9YeAA" CvElementArea="589, 513, 356, 35" CvType="InputBox" DesignTimeRectangle="590, 514, 355, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Middle Name' tag='INPUT' type='text' class='slds-input' placeholder='Middle Name' /&gt;" Guid="268f40a7-0a8f-4346-a9f1-0e18471d94e4" InformativeScreenshot="5580e91de162c95fb9ed135987615dc3.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/zN-vOziae06628jGU8-tYg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="bdfbc7b3-2245-4ed7-88ef-27b2ca0af913" DesignTimeRectangle="590, 491, 86, 19" ElementType="Text" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Middle Name' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Middle Name' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='Middle Name' /&gt;" Guid="8cf5fc57-ae71-4b33-9601-6302d43162c1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFoAAAAXCAYAAACLbliwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIiSURBVGhD7ZYxjsIwEEX3oNS00NLSUtPS0tJyBlpKzkBLmdWL9kefYRwiJCxY+UlWYntsj59NxE/XqEITXYkmuhJNdCWa6Eo00ZVooivxsujL5dItFov+mXE4HPqScbvdus1mM4zdbrfF2P/CIJrNr9frvvAeuV6v3XK5nCzk3aKVD2MjtJ1Op7/aZ3Anms1zS7MkETGbzT5K9Gq1SvP9CtH7/f7hlrApbvputxuEIImN0qf6fD7vD4NY5nF5vNNHoW9MNHXFlg5AOSHU8wAX7XlR1K6DIhfvo8RYMSWvEg+iz+fznQRgUsnQAi5aSWuMNqdYEvZPEu30K95F86QOxEtmRKJ5+hjgXWOOx+OwDm18bpSzf3roQ6DXFQtT8yrxIJqk4qTeTgHqEh03CorNkvI5gbHEMpcfGGieCLESHddgvkyCj4lrjdVjH5TyKpGKZmIlRMKS6JMTx+LEZIuqLUqFMdHcIv08VeIhgucIno+LjnP6jS6JjfU4h0qWV4lUNLDx+C2VPKDNRcdFJS/eNoibUiztLm+MLFZ5UFgvruNjsr5S3ce9SlE0T76jLEAfsBEK0E8iLM67/6fWWMXyjPOUvtES9Yxs8zpUbhuiPUeg7ZUbDVPzKlEUDUzsNxEZEpJtQj8pNhv/dTCX+sf+dbgsih+Iw7pRNBDLGOXNvJqLeI2JIp/Vp+ZVYhDdeC9NdCWa6Eo00ZVooivRRFeh634BNfOiAan/9o4AAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into '*Last Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(5).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="a307763a-c63d-4697-8245-96ccecfc204b" ContentHash="uDbUYb7MkUqtu9HGfuKG2Q" CvElementArea="587, 574, 359, 35" CvType="InputBox" DesignTimeRectangle="590, 576, 355, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='*Last Name' tag='INPUT' type='text' class='slds-input' placeholder='Last Name' /&gt;" Guid="6b011e62-3c17-4f88-8c3c-a79fa8604f23" InformativeScreenshot="dcc7f507d31c042df231ed5e6bb84082.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/K5FR4hUn6kCUmEnRoxfWXA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="a307763a-c63d-4697-8245-96ccecfc204b" DesignTimeRectangle="590, 552, 78, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Last Name' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Last Name' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='*Last Name' /&gt;" Guid="23613292-577e-49e9-9f92-f358361a0b7d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAYCAYAAABp76qRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH7SURBVFhH7ZW9SgNBFEZ9M9/AJ0gdsEqqQDpJm8bClNqmTSd5ABtTCBZW0YCVNguCsBbCyFly9ctkN8ksF0WYA8Nm/u7MnL2zOQoZF7JIJ7JIJ7JIJ7JIJ7JIJ7JIJ7JIJxpFPgwuw9vd47r2w2KxCJPJZF1rT1mWYTQaVfHqKIoi9Pv92rVoa5r3V2yJfL1ehNuTs/B8Na8Kvz/fy3Xv74ocDoeh1+ttjfkXIoFMvDkeVFkZ0yTSMqjT6VRlNpute0JYLpeh2+1W7YxZrVYbYxGKWIV4Jhqh1A0VqbEp1m4vYjqdbvRR4rEGca1P938IWyLJvvvTi/DxUoSn81mVoQqL14m0TQKHI5N42oH4rRySkfTz5FC6poqcz+ffsWnjBTGHop8G+hCkdRsLusa+vdWR/GdDcD1UHWxkPB5XB2zaVIrIeKyKVHQORV/grnrcB4hNyUo3kXZYuxpcN920XWUTkCISiMVhqatIjU3RjEwRqTGs7EsYxUVkLIW6ZaSim08VCXb9TKTGA51T17dLZLxWKi4i403ytG+kovLaiLQ5ZAvziM+6Noa2NhkJ9oLa0kpkfAXIFG1ngxyYTbJhvTb63bE5jEWSwrxYJBCTzwZzgXgWm/E2Jxa1r64viaKfpkNIFpmpJ4t0Iot0Iot0Iot0Iot0Iot0IYQvKERzby/bS6gAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Suffix'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(6).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="7630d57c-5d7b-43ae-a040-c4725d199356" ContentHash="2dgJoeJSjkWt8kCIhCNEmQ" CvElementArea="585, 652, 363, 38" CvType="InputBox" DesignTimeRectangle="590, 655, 355, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Suffix' tag='INPUT' type='text' class='slds-input' placeholder='Suffix' /&gt;" Guid="f2115842-3ffe-41c3-8104-c1b1d0dfabf7" InformativeScreenshot="111d97452bb9bf06f495b61299ded0ff.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/lxBUWMVaGkKsVd8JiRo3tA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="7630d57c-5d7b-43ae-a040-c4725d199356" DesignTimeRectangle="590, 632, 40, 19" ElementType="Text" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Suffix' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Suffix' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='Suffix' /&gt;" Guid="54a56c35-f7f4-4a27-8c5a-b7753e78028b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAXCAYAAABwOa1vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEdSURBVFhH7ZQ7DoQgEED3oNa22traWnsGW1vP4BU8g63lbB7JEPxLFpI14SXEBYR5Owx+5GUk4dgk4dgk4dgEE27bVrIsM89tv+97qetalmUxc7+wEp6mSfI8N4Hc4Hewrqoqmef5sB8SK0yQoijMUxmG4VFWWNM0jX132w/JSvgsCJniSN2Mkf1xHE3TE6F1XbfqM09J8D7ry7I0Y3CUpDusMKJIHZXBlTDcZViFgTVaz4wx58Pu0rEJmXHFQwoDvzmJsxO9YiessKlmIrQw876loJwKE4ygbBojwzRNiA9WmOAqAG4W2JTNdZ6nXijwEWaN/nl3z6fsLp3ebr7HBFZUUuub5ivMuFsK2/4TTkviX0nCsUnCsXmZsMgX7IEaYtBlwkEAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '*Company'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(7).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="8e26422e-0b7e-42ab-b6d1-eed7e43aa1ef" ContentHash="rRNPy9FpIUy7qmJFoPLjMw" CvElementArea="974, 709, 357, 35" CvType="InputBox" DesignTimeRectangle="977, 711, 354, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='*Company' tag='INPUT' type='text' class='slds-input' /&gt;" Guid="1bf7d989-fa68-4b61-b10b-1a15358b52c1" InformativeScreenshot="79c0311d705c4fd906e2a2fd1dc3f6f7.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/lhTjZ5Pbx0CgbZwaC0NPuA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="8e26422e-0b7e-42ab-b6d1-eed7e43aa1ef" DesignTimeRectangle="977, 683, 72, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Company' tag='LABEL' /&gt;" Guid="05d7a742-9994-460f-81eb-6e3a008b6f43" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAcCAYAAADLGVncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIRSURBVGhD7ZWxTgJBEIZ9Kh/Bp6CyoIXKhM7Q0kphIc9AYXO9jSEWJthhYWNiQ0wssDBZ8633m2FZDoYYQmS/5LK3t7uzs98Nx0kouCjCnBRhToowJ0WYkyLMSRHmpAhzUoQ5KcKcFGFOijAnWWHvD8/hqXtT91aZz+eh2+2GVqsVL+55dgwsCfv6WIT7s8vwcl3Fi/u320k9+sNkMomSaMVsNgtVVdW9/022wqiuu9OLWGkWqqjX60VB60irbzgc1iMhjMfjMBgMQr/fj2O0zLf9xWIR57IHe/EicrHSfYit51rXbreX1ikmcwTrbNxNrAijop4H4/D5Og+P51ex6gRVZQ+VwnPGlTyQjPq0HILENTftay7PGNNh0nFyUZUzt9PpxFYilaf6zFUMraPPC2Tdtrg++mzU9DYYV6KCZEiKZxzWrm/qsy6thlx8sAdXhVkJxJRoWt3b3LbFLSyXsMgJ5QCsoW0SBLafE2YPyEVc/SRVqTlh6yTZ59viEpZLxrKPCmNcsugD/aYKS8WMRqMwnU5/13hwCQM21tsU3PORJVm+FzY5Dqg+rUcY+2itYiMplUJrv2GbhBEDWYjz4hYGbKifApetKh1MYzZRKwSa+hyYg3OoXCybA/PIYVthVr6XnYTtAwnjcH8NMRG8S+yjFJZWnIejEkZMvovpH5OHgxV2qBRhToowJ0WYixC+AXjLA1iM6/oVAAAAAElFTkSuQmCC" SearchSteps="Selector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Title'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(8).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="8e26422e-0b7e-42ab-b6d1-eed7e43aa1ef" ContentHash="dGyXBwnh10-4IOSFiuHlJg" CvElementArea="588, 709, 359, 36" CvType="InputBox" DesignTimeRectangle="590, 711, 355, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Title' tag='INPUT' type='text' class='slds-input' /&gt;" Guid="7124df4f-cbd7-46b4-9eab-9e033b2a5bbd" InformativeScreenshot="d957c9dbb106b6675a5d06d4e51c4450.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/_c3PGiHACUqiofChhSOXAw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="8e26422e-0b7e-42ab-b6d1-eed7e43aa1ef" DesignTimeRectangle="590, 683, 32, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Title' tag='LABEL' /&gt;" Guid="6096c5dc-3a74-4a47-a862-bc4706272ed7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAcCAYAAAAJKR1YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADVSURBVFhH7ZOxDoQgDEDvQ5ldZXV1ZfY/+A9+weE2NhcHhht6KbEJp54Vj4sMfUkDhSa+lPp4zU+oKeoTgsoQIQ4R4hAhDhHiOCU0jiO0bRvXPYZhAGvtkv1GFAohQN/3oJTaxN6H1gLFhVKwC13XwTRNy8mW24XozHv/0UmtdaxbC+GeavAuhywhOjvqkHMuSuMYILndKypEs4hSBO7x/ix/EaLnokg7xlFcyBgT669SfIZwzenImktCmDdN8/Uvwzx9snSmODZCdyNCHCLEIULHALwB250feElOVqgAAAAASUVORK5CYII=" SearchSteps="Selector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(9).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="02f807d1-dd0a-4a30-be5d-bc584ef1aa9f" ContentHash="Q_nLOwRT7UOVuKed3vQq-A" CvElementArea="588, 776, 360, 36" CvType="InputBox" DesignTimeRectangle="590, 778, 355, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Email' tag='INPUT' type='text' class='slds-input' /&gt;" Guid="d15be083-fac7-4c7f-a2c2-1db72f0ed5f3" InformativeScreenshot="6620b7bb0664a110a79bfe53d12ffcfc.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/FH89axgvEEqFTDEYWPoudg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="02f807d1-dd0a-4a30-be5d-bc584ef1aa9f" DesignTimeRectangle="590, 751, 39, 23" ElementType="Text" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Email' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Email' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='Email' /&gt;" Guid="64c3dec4-e427-43cd-9d4d-415894a8819f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAbCAYAAADlJ3ZtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADeSURBVFhH7ZMxDoQgEADvodTWvsHW2jfY8iDfQGvJZYgQJKhczjUx2UmIrLusI8rHvwiVlUJlpVBZKVRWCpWV4lFZa60fhsGv6xrm0zRtmTaSLA1oZIxJIzaW4G/ZcRz9sizbHVnEZGlMLu48V+fcLs6/ABK1r5MLisp2XRdy1CFQxtQALzHPc5iXuVtlaRx3hFF7CFzFOeRqfc7WHNG8s7/IEl+9dLmmhdtlazlGnB/VtXC7LFdiePSf7fs+HJiy8VlMPetYzyFkA8hDXlf2aCHJvgGVlUJlpXiRrPdf5lxrqI8UMq8AAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NSelectItem ContinueOnError="True" DisplayName="Select Item '--None--(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[CurrentRow(10).ToString]" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Version="V4">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="33">
+                            <x:String>--None--</x:String>
+                            <x:String>Agriculture</x:String>
+                            <x:String>Apparel</x:String>
+                            <x:String>Banking</x:String>
+                            <x:String>Biotechnology</x:String>
+                            <x:String>Chemicals</x:String>
+                            <x:String>Communications</x:String>
+                            <x:String>Construction</x:String>
+                            <x:String>Consulting</x:String>
+                            <x:String>Education</x:String>
+                            <x:String>Electronics</x:String>
+                            <x:String>Energy</x:String>
+                            <x:String>Engineering</x:String>
+                            <x:String>Entertainment</x:String>
+                            <x:String>Environmental</x:String>
+                            <x:String>Finance</x:String>
+                            <x:String>Food &amp; Beverage</x:String>
+                            <x:String>Government</x:String>
+                            <x:String>Healthcare</x:String>
+                            <x:String>Hospitality</x:String>
+                            <x:String>Insurance</x:String>
+                            <x:String>Machinery</x:String>
+                            <x:String>Manufacturing</x:String>
+                            <x:String>Media</x:String>
+                            <x:String>Not For Profit</x:String>
+                            <x:String>Other</x:String>
+                            <x:String>Recreation</x:String>
+                            <x:String>Retail</x:String>
+                            <x:String>Shipping</x:String>
+                            <x:String>Technology</x:String>
+                            <x:String>Telecommunications</x:String>
+                            <x:String>Transportation</x:String>
+                            <x:String>Utilities</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="a6e6d52d-982e-4c7d-b6ad-37edb986860e" ContentHash="KwS36Q1SbkSyJI3Ut-m62A" CvElementArea="974, 776, 358, 35" CvType="InputBox" DesignTimeRectangle="977, 778, 354, 32" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aria-label='Industry' aria-role='combobox' tag='BUTTON' type='button' class='slds-combobox__input slds-input_faux fix-slds-input_faux slds-combobox__input-value' aaname='--None--' check:innerText='--None--' /&gt;" Guid="1ac1148c-f860-4ec0-815f-2fa271aa936d" InformativeScreenshot="85f51cacb10454b2ab43940e22091bd4.png" Reference="lx6ywIDJqEa-703Y1lPkZQ/7vtm0PlNw0ynAHu3ob3new" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="a6e6d52d-982e-4c7d-b6ad-37edb986860e" CvTextArea="976, 758, 48, 16" CvTextArgument="Industry" CvType="Text" DesignTimeRectangle="977, 751, 54, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Industry' class='slds-form-element__label' tag='LABEL' type='' check:innerText='Industry' /&gt;" Guid="078128c8-3d4d-4705-8060-280b4d3a6ed0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAbCAYAAAAtS5y7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF5SURBVFhH7ZY7boUwEEWzUGpqWjr0Wmpa1kDLGtgCEm8FNCkoUjg6KBdNCBCbJFL4XGmEPWOP59gG8fL2+nRXsOuAuovoBj2bbtCz6QY9m27Qs+lXQPu+d4/HY3z+V02gTdO4oig+emH6KegwDON8avgrXRuUgtM0dXVduziOXRRFXzaBPn6McQJdgmasINq2nXImSeK6rhufysVcwJlTluUYy7JsNLsR5KFG381dBWUBLaq+Fqqq6hM4beKMw9ZA8VEcRVotnajNieZr0sd8tXmitiBiJF6K4ROcbUsCXbuia6AWhPXyPB/HYrTnG7Ylb1Dt4BKI9S3FBYrwc1JcU/l8QC2chfbVLtB5jDY+YtgWqGTz+IAi4qpjHvtOwaCIcRqLaOt9mhfN056eZMf5gpKfk8TsRvpoF6gK05fSfnWR4DBtCj7iuraYBdEc8pB/CRQpX6gm0KNImxaqQ4Fyw0I/QtIhQPWq8KNhX6cQHe7q7tUNei459w5f32WwZa8/aAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NSelectItem.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NSelectItem>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Phone'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(11).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="b705fbd6-e672-462e-85e2-691560555f72" ContentHash="AdQFQUkVCUi1Cqmqmmb07w" CvElementArea="587, 844, 359, 35" CvType="InputBox" DesignTimeRectangle="590, 846, 355, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Phone' tag='INPUT' type='text' class='slds-input' /&gt;" Guid="2318b60e-62d0-4b3f-b2c5-5a2377934446" InformativeScreenshot="b953909bbac39e12b61f811905f9b626.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/q9ZbgcMVgEWhuyWEFUUsjg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="b705fbd6-e672-462e-85e2-691560555f72" CvTextArea="589, 826, 38, 12" CvTextArgument="Phone" CvType="Text" DesignTimeRectangle="590, 818, 44, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Phone' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='Phone' /&gt;" Guid="0fe33545-ab39-4ed3-8ec5-b13872f3a471" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAcCAYAAAAnbDzKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEcSURBVFhH7ZQ9DoMwDEZ7UGZmzsDKzBlYuQdXYOgJYOjA0MHVV/FFbiRCkJDcSH5SVPJj4heHPt6vp5TcyheQwnEBa1zAGhewxgWsyRbo+17Gcdx7/0MQ2LZN2raVqqpCQ9KkCIGu62Se59CHEJMuTgBM0xSqgN9hGEKV6rr+WYtnjLF6WjaObZpGlmXZZ+W7lnHcL5dLAjpp9DmHZJAU1gNWj/1ULNZgLWIAxq9U+lAgTip+sd4Y40yIYJ5jR7Hruv6IAh2XQ/Ij1i+Ok4AohCmg54CeP4qlgN4TjQeTQ/IKac4E4lNLVUALpPbM4RYBPOOOs2IY01fjTP7KicfcIsC+/hfKvX4A8/oK6dgzgkCpuIA1LmCNC9gi8gGXuCG/6YEX3wAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'No. of Employees'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(12).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="a0734a8d-c17c-4cda-b7d8-1a007bbeb89b" ContentHash="g58na1xnrE2-sjMKvfqw0w" CvElementArea="974, 844, 359, 35" CvType="InputBox" DesignTimeRectangle="977, 846, 354, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='No. of Employees' tag='INPUT' type='text' class='slds-input' /&gt;" Guid="a8853477-434f-4982-85f0-c2d9dd256259" InformativeScreenshot="6856b7636d388dd629cf88188e0634ca.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/hn3If8MK202gWEEty-t0Gg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="a0734a8d-c17c-4cda-b7d8-1a007bbeb89b" CvTextArea="976, 825, 101, 16" CvTextArgument="No. of Employees" CvType="Text" DesignTimeRectangle="977, 818, 108, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='No. of Employees' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='No. of Employees' /&gt;" Guid="e48a38f7-24db-4c78-9d06-50ba01eb6fbb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHAAAAAcCAYAAAC51jtqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKOSURBVGhD7ZetcgIxFIX7oGgsWCwWjcVisTwDr4DoE4CoQFRs59vpYQ6XZJctA21ovplMN8n9yz1hoW+fH+9NHeWOKmDh462pFE0VsHCqgIVTBSycKmDhVAELpwpYOFXAwqkCFs6fEXC/3zfj8bgdPD+bw+HQzGazX8l9D2cBd7tdMxqN2r8OB5vP5+3fR7JcLpvNZvM9u0S1+Yh13stLCDiZTNpDuFjPFDAnCuvsP5KXEFCfAm9WSkD29UmYTqc3i5vyO51ObXyt88yakxNQTV+v12d/bBk+F8TAVvn8da1YPqdGxVF+1etx8dHFd7/4dcAza+x537p8+rgSMBZIcOZKhsDeZOx8nqPPj9zeFEe1RXRw7WHnzWbujWLdG+T7DAmoHvgrHV/N4yVnzpCfzkEsF9YvCDbYHo/HC5+hXAkIMTEJUkUARS8Wi4u1yC1+5M4dgnWE0Ug1HfrmLgJ4w92WOevsC9aplzV/9nNEP9+LopNPfY11DSEpICihJ/JnBzv8c9zi1xUj1iaId4+AoLxum8rHvs7gwjAkJn5+0TRYJ29c19sAX2KzNlTIrIAKut1uz4XHhoAfJsctfmpkilRDIcbtmxPDG+Q1uC35ODP7gnUJBRJFQ2upOsHtchCbvLk+pMgKCBTNLYnfI344P6w/R7r8gP1c4ana4CcC+lloqGpwW56x84bj63NsEJShePJLnYO4/MpXLTlinj46BQSC+aEBO70GukSJ5PyAvS4B5adBXdQ0VMDVatWehxh+rpSv7JQvQjyGg79+aTJif7TOwJc9bHxtCGcB/wM0Z8jt7oN4uUv3LKqAP4RPmn8n/hZVwIHolTf0H+5H8a8EfEWqgIVTBSycKmDRNM0XWhjKN86wxZEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Mobile'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(13).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="0cb74a39-e0f9-4c97-acad-f21810a70bec" ContentHash="umJREpzMxEeIH4D-7rp30A" CvElementArea="587, 711, 360, 36" CvType="InputBox" DesignTimeRectangle="590, 713, 355, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Mobile' tag='INPUT' type='text' class='slds-input' /&gt;" Guid="ad928b21-600c-425e-a2cf-64913d63f8c0" InformativeScreenshot="60f3f39ba361271cad23d6c23a5ac9c6.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/T1a_jEjctUK7ekQDlvGsLA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="0cb74a39-e0f9-4c97-acad-f21810a70bec" CvTextArea="589, 693, 42, 13" CvTextArgument="Mobile" CvType="Text" DesignTimeRectangle="590, 686, 48, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Mobile' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='Mobile' /&gt;" Guid="284173b1-0bb5-4eb5-bf60-dfa257e66d8e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAbCAYAAAAzgqwIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFwSURBVFhH7ZSxboMwFEX7ocyssLJmZWZlZeU/WBkZ8gUsHRg6uDpWbvTiAKGtIrnIR0IGY7/3jrH5+Pq8ujNd5xNyJyMJxU4Sip0kFDtJKHbeJtQ0jev7/vb0yDzPrixLNwyDv6+qyk3TdHv7N+5Cy7K4y+XiL+5DVMRWkSF7Qpa3CtV17Yqi8CsXQnFZlv0/oa7rfDEWkvLl2rZ9KJIi8jz3oqEsMYjFPN4xTkVbiTUh5q7FPMKT0DiOvrUJCKoVVwIK0TkAbVk9M95K0M945u0JKReEMY/wJETgMKjtl5AdI0isPlqNBVvcllAoBzbnEVaFCExyWlukDb6WiLnEIFYoBPS9EuIrarvpUv4jrAoBxXAGwj4VSRsmevWF7IJtCWkhf8umEC1ngAS8Ayuk90gAY+x+R0hnBpinWFtCwLxwoX7CphAQWAWCFQJJaWvYsczlr6gtZOX2hLQwiml/LEe4C52FJBQ7SSh2Tibk3DdsgOoxxhO5CQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NSelectItem ContinueOnError="True" DisplayName="Select Item '--None--(2)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[CurrentRow(14).ToString]" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Version="V4">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="12">
+                            <x:String>--None--</x:String>
+                            <x:String>Advertisement</x:String>
+                            <x:String>Customer Event</x:String>
+                            <x:String>Employee Referral</x:String>
+                            <x:String>External Referral</x:String>
+                            <x:String>Google AdWords</x:String>
+                            <x:String>Other</x:String>
+                            <x:String>Partner</x:String>
+                            <x:String>Purchased List</x:String>
+                            <x:String>Trade Show</x:String>
+                            <x:String>Webinar</x:String>
+                            <x:String>Website</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="b2201bcf-ff47-44d8-9997-f55812f9b5a4" ContentHash="4WcAhNmqx06tKjIAYInwmA" CvElementArea="974, 711, 358, 35" CvType="InputBox" DesignTimeRectangle="977, 713, 354, 32" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aria-label='Lead Source' aria-role='combobox' tag='BUTTON' type='button' class='slds-combobox__input slds-input_faux fix-slds-input_faux slds-combobox__input-value' aaname='--None--' check:innerText='--None--' /&gt;" Guid="9b3fbdeb-218b-42d6-852b-032f8cf9c761" InformativeScreenshot="264a91838b831f56ec27d1a0d79a73fe.png" Reference="lx6ywIDJqEa-703Y1lPkZQ/SxUvkWlKEkyM5fBt6nMOSQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="b2201bcf-ff47-44d8-9997-f55812f9b5a4" CvTextArea="976, 694, 71, 12" CvTextArgument="Lead Source" CvType="Text" DesignTimeRectangle="977, 686, 77, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Lead Source' class='slds-form-element__label' tag='LABEL' type='' check:innerText='Lead Source' /&gt;" Guid="e1010757-db80-4e01-9f66-4230415aacc6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAbCAYAAAAETGM8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVGhD7Za9bgIxEITzoNS00NLSUtPS0tLyDLSUPAMtpaMP3ZCJc767kM2Pov2kE7HXu54dmyMvJfkyaWIAaWIAaWIAaWIAaWIAaWIAaWIAaWIAaWIAaWIAP2bi6XQq2+22G/0vHiZ+d5ND9W+3W1mv12U2m92f5XJZrtdrF/37/LqJMvBwOHQzpZzP53K5XLrR32eSiTSoW+JruC3cGsXcCI/xeTwemyZuNptB08jTHn5LySGXGlDXIm+3291zOCjitWb6BnLm8/mHPaYwaiLzEgCskVnEXMRisbh/spYcxSS8rz5QryWcmO/veqaY6HWlwzVz65lfrVaPPN9jCoMmUsTNgL514A30iWjlCeL1LaibA9+HZ8xE/3a0NLDG59kX/dIxxiQTdfX1yKA6ztdBJta1xkwUrFOdVjPUYd1nTeRvHwvmvD/vZQqjJrooRwaSp7HWMiejRX3aQ6jZ6JvY0qD9nmX0nUjx2hCoG+RT70Ri/u7RuK8+sf1+343eDkdNkeP7+wHVGsjxG1SbyDxx6WKs/wSk/RnemVhfaW/E5yXCc2iG5iREgolhYOvXGdhHdXi8cfD96wP1XA5j6CaC63LD6/5bWvt4mJg8T5oYQJoYQJoYQJoYQJr4ZUp5Bc9HxgWxWQCeAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NSelectItem.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NSelectItem>
+                      <uix:NSelectItem ContinueOnError="True" DisplayName="Select Item '--None--(3)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="[CurrentRow(15).ToString]" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Version="V4">
+                        <uix:NSelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="4">
+                            <x:String>--None--</x:String>
+                            <x:String>Hot</x:String>
+                            <x:String>Warm</x:String>
+                            <x:String>Cold</x:String>
+                          </scg:List>
+                        </uix:NSelectItem.Items>
+                        <uix:NSelectItem.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="b2201bcf-ff47-44d8-9997-f55812f9b5a4" ContentHash="HPeTa5hZBka7DquzIi6org" CvElementArea="587, 779, 359, 35" CvType="InputBox" DesignTimeRectangle="590, 781, 355, 32" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aria-label='Rating' aria-role='combobox' tag='BUTTON' type='button' class='slds-combobox__input slds-input_faux fix-slds-input_faux slds-combobox__input-value' aaname='--None--' check:innerText='--None--' /&gt;" Guid="b61d6f0d-9e90-45db-b6ba-08a342728ef5" InformativeScreenshot="9908090941f09f175810ae87af9abb6f.png" Reference="lx6ywIDJqEa-703Y1lPkZQ/pvbsHOq_M0eaQJiqWi_OqQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="b2201bcf-ff47-44d8-9997-f55812f9b5a4" CvTextArea="589, 760, 38, 16" CvTextArgument="Rating" CvType="Text" DesignTimeRectangle="590, 753, 45, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Rating' class='slds-form-element__label' tag='LABEL' type='' check:innerText='Rating' /&gt;" Guid="fece8dbe-174e-4cc9-92c8-0a59076211e4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAcCAYAAADIrlf0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFFSURBVFhH7ZQ9roMwEAZzUGpaaGlpqTkDLS1n4AqcgZbS0aB8yFmBcEJenhV5JCv+y9pjr7m5HyBJxEKSiIUkEQtJIhaSRCz8icQ0Ta4oivX3G2wSy7K4uq5dlmVboU3/GWy2qio3z/Oj57s8STRN83R6bdu6vu8frWOilhjHcRUR1O0tMce/PaR9KQr1YRhcnufrHD8m+HGZR+xXDuRQgjbB2CQQtOu6ta4x3ZK9CStRluUmrbbiEsMeFOOKFcLhm+DU/FuxsHioBHU/Fhvlv3tj9H3sJljIPyFgYUlS3pXQAexteK/vjEMJuziL+lLaCFyRsGM2VginD1u5rBQApd5VCbA3Tv3Sm7AS2iyBCUpwvRfmaiPAHKXYKxJaQyl66esUC8hyQMiFEpWETdNQ/l1Caajiv49Qokund0gSsfADEs7dAYkciNyk3uo2AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NSelectItem.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NSelectItem>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Street'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(16).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" ContentHash="4W_uVinUfkuHMXTWcXn1AA" CvElementArea="587, 624, 361, 60" CvType="InputBox" DesignTimeRectangle="590, 626, 355, 57" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl tag='TEXTAREA' type='' class='slds-textarea' aaname='Street' /&gt;" Guid="ffcf58bf-5c17-499a-af57-8a6f11958be3" InformativeScreenshot="6eb4c310768da7ea4b127af4294a22ed.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/VWyZZ513z02lK8R_5fn4AQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" CvTextArea="589, 607, 35, 12" CvTextArgument="Street" CvType="Text" DesignTimeRectangle="590, 603, 41, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Street' class='slds-form-element__label' tag='LABEL' type='' check:innerText='Street' /&gt;" Guid="3b6a13cc-189f-4749-8ccb-6b7412989727" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAXCAYAAACf+8ZRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEkSURBVFhH7ZQxjoMwEEVzUGpaaGlpqTkDLS1n4Ar0dLSUXj1rv2XNRhsrQVaQ/CTLsTN4HjPAw92QIp2LIp2LIp2L+0tv2+bqunZVVfkxjmPY77rOHcfh11dCjnmef1dpBGnEmqbxs1iWxZ3n+d3SwzB4yZh1XUPlGSRAnpuYpinsAbPi1CXBOj6DPH3fh722bZOLEqR1iE0GttLMJIljuTmu103HFWRWrPIQD3FcKn9eRA6xlXomzVqPkhUBfnOGjQUkJXqJtOAwVS5VWq3WYG/fd98V+5+Kcqk0IjzjiKVIK9ZCLPK61vKRNO2M24uAviavpIHE6owFMVXW8pG0bTHf61iKw9knwTNpUIyGivDf2cys3/p63IkinYsinYsbSjv3A9RwZitN8/MxAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'City'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(17).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" ContentHash="34VT2AQXEk-QbvZRA37Q6w" CvElementArea="588, 709, 357, 35" CvType="InputBox" DesignTimeRectangle="590, 711, 355, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='City' class='slds-input' tag='INPUT' type='text' /&gt;" Guid="7b2488dd-43ca-4965-8a95-36624fe0894c" InformativeScreenshot="4b5801d05bb58b359ace1845fa097dc0.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/l0eujl5in0md0cgZsZO0fQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" CvTextArea="589, 691, 24, 15" CvTextArgument="City" CvType="Text" DesignTimeRectangle="590, 687, 30, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='City' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='City' /&gt;" Guid="fc1b7dbc-f4d1-4763-b778-fcd735b0a9f1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAYCAYAAACfpi8JAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVEhL7ZQ7DoQgFAD3oNbWtra21raewcTKM9haegZbSzZjwAXED8omFkxClt/y5j3Rj3gJUcQmithEEZvLItM0iSzLRN/3ciYsGxEVMEmSpdFnzgahoijEPM9y5hmGCIcTXM96HEfRdZ0c/fibCFnneb4EdqGvN02zVozWtu2ypleOPVVVydE5q8hZhraovp9GX1WScVmWu0m5MESOMjgSASpAA/YgspeUiyAVAT24LnWVW3cEXOJ1XYthGLwfC6wiQBZpmhqH0OetuSLCHBII+WKIAIfpb4QKZoswxxp7+A+w5+5HbyPyBESQ49eXoCJ3LqkiiAiPi7tl3xkfglbkCVHE5iUiQnwBBu5EzqE4pM0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Zip/Postal Code'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(18).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" ContentHash="TECzW8na50Wa8uDLm7DxUA" CvElementArea="588, 770, 237, 36" CvType="InputBox" DesignTimeRectangle="590, 772, 234, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Zip/Postal Code' class='slds-input' tag='INPUT' type='text' /&gt;" Guid="4a3a9da3-1e02-4a9b-af9e-c267850f7f57" InformativeScreenshot="3179c4697ddb0dff89a21ae1a7ba4e63.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/8dfeGvseo0SbwRRy8ia0uQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" CvTextArea="589, 752, 93, 16" CvTextArgument="Zip/Postal Code" CvType="Text" DesignTimeRectangle="590, 749, 99, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Zip/Postal Code' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='Zip/Postal Code' /&gt;" Guid="0b352e6b-b4ac-4783-8489-deaac05573f4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGcAAAAXCAYAAAAWY1E4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ4SURBVGhD7Za9jsIwEITvQalpoaWlpeYZaGl5Bl6Bng5Kypy+E4OGjeMkEJBP8khW/Ls7O2Mf99NUFItqTsGo5hSMak7BqOYUjGpOwajmFIzB5uz3+2a9Xje32+0+83+w3W7/+H8aaLPZbJrT6XSfeQ8Pc47HYzObzVptuVw2l8vlvms8EIbYiDNlXGIOvSx95sADPu9y+5g5ESSieER4FRRIDL6I4wLRf+clTmWOLqXXibiHw+E+Go6vmUMxFCX4WH2ablvKRPZJFO8DN47mN9fzAs+jOBrTyB1jeC7O+1jgzGq1yorZx8257Ha7ljmR+xgkzSE4pCEmEFjEREiGsH+xWDyRireIM06O2JhzPp//vr7mYvKNggBy+8th3MXH4zlijAjmc9zieebn8/lTzeKuWOI4BC1zCJJ6mp7I+0IUABK+hzVfZ42WEojccGCuS8CueRBriNyEyDEix+16vbbE9rypVxk16EPLnK5CmFMh3hdiYtadOGt63jSdTwmkV6WXq7MuVBSOL2PF9xtMfOcmpMR35Ljx4uMljub4n0O1GC+HJ3NyZClOgb0vMOY8iOICzgwViOIoMvLwvH6ORl/5GbtwnEnlhl/uNyfHLfVyPF5Kg7F4mNNH1IWh7zcTgv7vJ+tRjNQc4Axnfa1LTBfL+5E73yG/OYB5rwXQ57+1Pm583bwYi73S7BU8zCFIfII0iU5iJaLP7YEYe5xQvLUCZ2gpSATl9H30IxdAHuXHKJr2YRRrLlJXbuBnaS54jhtw3eJ/a86RFi9BH1q/OUMAwa4bQaFdaxXjMLk5zGNQxfuY3JyK6fCSORXfQTWnYFRzikXT/AIlhRcwi0RqPQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'State/Province'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(19).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" ContentHash="WrlkD7UUK0q0sHC7yd_0Xg" CvElementArea="830, 770, 116, 36" CvType="InputBox" DesignTimeRectangle="832, 772, 112, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='State/Province' class='slds-input' tag='INPUT' type='text' /&gt;" Guid="ade350f7-29a9-40f6-b49c-544c916bc46c" InformativeScreenshot="6e5b7cb67decb8468687caa5b50602ad.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/7jLRkXhZLE6NbWZ_BoZ3jA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" CvTextArea="831, 753, 84, 14" CvTextArgument="State/Province" CvType="Text" DesignTimeRectangle="832, 749, 90, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='State/Province' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='State/Province' /&gt;" Guid="247f9cff-d5c8-459b-8352-f1832c1deeb7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAXCAYAAACChfjKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVGhD7ZahksIwFEX3Q9FYsFgsGovFYrFYfgGPA4nszulwO7dv06YINjOQM5OhSd67ybtNs/vTVIpQjS9ENb4Q1fhCVOMLUY0vRDW+EF9p/O12a5bLZXM+n58j/0/PeDYym826djgcuvH1et08Ho+2P8Yrsc52u21z4x7m83lzuVyeUZ9DZzwFcwo4DYBxx+OxfX638axJDr/k8xJE3Nen0DPeCxacej+BxOlT1Zi+jFRsHB9aQxpxH7zAzWbTnnraarVqdrtdT5946eslkcfLVAyQj9b1em119CWRv9/v23jXEGhEfcjVNUZnvMyUAQ4L+ymmr4LY/GKx6IpIxXqfDfoabiwQP2Y8V4/n8zy0HnOuRZ9GrdF4v9LoKw89N/t0OrXPubpy9O54RBDjDbpIXMRhLBqnWOkxJnh2M3J99iE91sAwmRANBN8PjWftReMp44fqZc73D4zn6srRM15IWEK+EdC8PjM/LR4b49RcKxbG81Asa0TjmVdfSJM8mU1f9eSMZ5y8+/3e5TtT6sqRNB68qJSZMsuLgxib2rhIGecGRdB55cQDhtL8Bce8MeO9VpGrawqd8fwH40IsprvNzYyb5nfsjqcg7zsyxSF/qvFArOvH9cmhj1HKm2o8Goyn7vixuqbw54+rPhtfDHEWYZzCaIqjAOZURIwFClO8xolLnRrmXjEeXD+aof24JvlTjQfmUvqpuqYyeNW8mzGDv4FixmP6Kyfk0yhm/LdTjS9ENb4Q1fgiNM0vKaQJHaCqeSwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'Country'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_15" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Text="[CurrentRow(20).ToString]" Version="V4">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" ContentHash="SfjUxxa-vkGAR9okV4XdQQ" CvElementArea="587, 832, 359, 35" CvType="InputBox" DesignTimeRectangle="590, 834, 355, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Country' class='slds-input' tag='INPUT' type='text' /&gt;" Guid="7a68134c-db97-4d8d-a60e-e15ef570004d" InformativeScreenshot="167af7678aeba4170c84c5c19f331bb6.png" IsResponsive="True" Reference="lx6ywIDJqEa-703Y1lPkZQ/NOSGOmVQqkSN4oDInX5RtQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" CvTextArea="589, 814, 47, 15" CvTextArgument="Country" CvType="Text" DesignTimeRectangle="590, 810, 54, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Country' tag='LABEL' type='' class='slds-form-element__label slds-no-flex' check:innerText='Country' /&gt;" Guid="e304fe52-84d1-4578-8573-8bf70565118a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAYCAYAAACr3+4VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVFhH7ZQ9joQwDEb3oNS00NLSUtPS0tJyBq4AV6ClzOqxY+RkGZEwYrX8fBICO8HOs5N8mZvoAb2aHtCr6QG9mu4LOo6jSdPURFE0P3zjO1J935ssyw7NY4F2XTfD8RaxiLZtX9Yx+lNQkpCMpO/kdrssy9fIz2KLojDTNM02b2z8EpuCxXFs/SvFladpmgW8qqrZV9e1yfN8iY34n7m+WkBJ6AbTws+4Dq6TbYFSIIkvtuwcAcMvNgWR2FIo/GITS+b7yALVHXK1VggNp7+RC+ruFrdILqi2EfOlMFtrXZN3R9eC68qGggIZAqrza2hfeZ/RtUIwd29HQ0GJB+AwDMHbFi2giMScDb0gvrlECMy5ksUhEovtwuhY7hhiXP7FvwWKmK9zhsgCRXRO34K6iwIrY25CbBnjpvTtKAJAYr4DxZ8kiRXHV79A/7MA1McjRKcC3XMJiU4BKscJ0L06VUc/0QN6Nd0E1JhvlifV+8xfzBkAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,216" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="faf7000c-1391-4e69-adae-2b174b9a1567" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="business-speed-8517.lightning.force.com/lightning/o/Lead/new" CVScreenId="54cbbb49-9075-4960-9a32-a16a330d0805" ContentHash="42w441Xw4EymNOtq18vIGQ" DesignTimeRectangle="1279, 920, 61, 32" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/forceModal/lafPageHost/oneRecordActionWrapper/oneRecordActionFlexipageWrapper/auraIf/auraIf/recordsLwcDetailPanelWrapper/auraIf/recordsModalLwcDetailPanelWrapper' tag='RECORDS-MODAL-LWC-DETAIL-PANEL-WRAPPER' /&gt;&lt;webctrl aaname='Save' tag='BUTTON' /&gt;" Guid="f8095231-580f-4135-b91a-60537456550d" InformativeScreenshot="19ce030e2b4194d9e15a2077e48d1e5d.png" Reference="lx6ywIDJqEa-703Y1lPkZQ/ShpXpjMG7kmDEM1nOk2CWg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='New Lead | Salesforce' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Edge" ContentHash="046orF1B5UGjg9Zz3GwFow" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVFhH7ZZBSBRRGMdHYolFJCJEJEQkJERCPISHCAlP0qGT5w7RwUNIhESEiAfxGJ46ONIpwmOIiHiQiAiRiOgUb6JTePLQIUQ6TL//25ndt85jXGmc7eDht2/3zbfv+79vvu+9L4jjuKOdnAv4fwUEq+ZCsBp1wmW4BFXN+Wz/hYwAHMkxDs0I431YgHl+TzHe0LNmu6gfrkEfNl1BGJ1KZJOA2q7NAIs9hm8QNzB/GL/CDAzCTZiFDfgMb+ERjEKnu24exwREPfASHMcZDhDzjvHLsfmUXbgHen1d0JugaGWiUxfAw4ssTJjNId99C58GCXwA0/CCNcFG7jawyUYuuQKUbOvgW7AoDCzCdbAiXAEKP+H1/rFoXkG/T8DvxKAMnkHFFXAFlM0+4+IJ7evotQKUFPxQaX2oG5TD3USADf8y/EoelMWTgA8dPiqXI+dBWcxIAPUffXImy2RcAqokRDt2/wO/3Qgw3HJeg7PmKVTSV/AzmSwJ84axzxYAXyqgCvAYFo35zrgEw+m1nZbhMHysGRVIaHS3vMbxCuNzmASVfPNlpAm4hSHGBd0Hob3YuP2MDjj1GDpp865jexqqs5kAdUJSvAd+Bw32YQt2QD3Ce5gDdVRV15mPuoD6hKIRqv+jRGp3+kn9gRJqDIZATvU6vbv1kRHgwiLqZLSbbJXUzo5NGIeK7/+tkC+ATCWR1KjcAXU126BkXYOHoPd7YpjzyBWQghOVqsJ6FVF0vzaT1fO1FOY8WhJwlpwLaLOAuOMveA1Of+TuOKQAAAAASUVORK5CYII=" InformativeScreenshot="fb4afc428c847de651cc8e1fc4b8069d.jpg" Reference="lx6ywIDJqEa-703Y1lPkZQ/VlxyKd0LH0iR4eCc2MD2Bw" Selector="&lt;html app='msedge.exe' title='Home | Salesforce' /&gt;" Url="https://business-speed-8517.lightning.force.com/lightning/page/home" Version="V2" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
